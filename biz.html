@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      const currentUrl = window.location.href;
+      window.onpopstate = () => location.reload();
+      window.history.replaceState({}, 'test', 'https://robertlai.github.io/search.html');
+      window.history.pushState({}, 'test2', currentUrl);
+    </script>
+  </head>
+  <body>
+    Pretend this is a biz page.
+  </body>
+</html>
